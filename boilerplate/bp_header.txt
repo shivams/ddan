@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#This script "summons" the given application as mentioned in the variable `appCommand`. Class of the window of the given application is to be provided as variable `windowClass`. 
+#By "summoning", we mean that running this script will either bring into focus the given application if it's not in focus, OR it will minimize the application window if it's in focus.
+#You need to assign some key-binding to run this script. You can do this in "System Settings" of your graphical shell (GNOME, Unity, KDE etc.)
+
+#####################
+#### SETUP ##########
+#####################

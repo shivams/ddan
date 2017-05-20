@@ -1,0 +1,24 @@
+#####################
+#### MAIN  ##########
+#####################
+windowIDs=($(wmctrl -lpx | grep -E "^\S+\s+\S+\s+\S+\s+""$windowClass"".+" | awk '{print $1}' | xargs printf "%d\n")) #Array containing list of windows with the given window class
+if [[ "$windowIDs" == "0" ]]; then windowIDs=""; fi; #Set $windowIDs to NULL, if it was made to be `0` because of printf.
+activeWindowID=$(xdotool getactivewindow) #ID of the window currently active.
+
+#If some window of the given application are present (i.e. windowIDs array is NOT null), then do this
+if [[ -n $windowIDs ]]; then
+	echo huzzah;
+	#IF active window is our application window itself, then minimize it
+	for ID in "${windowIDs[@]}"; do
+		if [[ "$activeWindowID" == "$ID" ]]; then
+			echo "Window is already active. So, minimizing it and exiting the script."
+			xdotool windowminimize $ID
+			exit
+		fi
+	done
+	#ELSE, bring onto front any one window from the windowIDs array
+	echo "Gonna bring the window for you"
+	wmctrl -ia ${windowIDs[0]}
+else 
+	$appCommand
+fi; 
