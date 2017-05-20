@@ -20,5 +20,5 @@ if [[ -n $windowIDs ]]; then
 	echo "Gonna bring the window for you"
 	wmctrl -ia ${windowIDs[0]}
 else 
-	$appCommand
+	$appCommand &
 fi; 
