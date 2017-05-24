@@ -9,10 +9,15 @@ Requirements
 ------------
 
 This script has these dependencies:
-	* wmctrl
-	* xdotool
-	* awk
-	* xwininfo
+
+* wmctrl
+* xdotool
+* awk
+* xwininfo
+
+All these tools are available in standard Linux repositories. In Ubuntu, install them using:
+
+    sudo apt-get install wmctrl xdotool awk xwininfo
 
 How to use
 ----------
