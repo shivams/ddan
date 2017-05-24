@@ -22,7 +22,11 @@ All these tools are available in standard Linux repositories. In Ubuntu, install
 How to use
 ----------
 
-Let's say you want to guakify "Firefox". First of all, open a firefox instance. Then, in terminal, run this script. It will ask you to select the window of your desired application. Select the Firefox instance. After you select, the script will automatically decipher the "Class" and "Command" for your application window, and it will show you what it found. You can make changes to the "Class" and "Command" if you think it didn't find any of them correctly. 
+Say you want to guakify "Firefox". First, open a firefox instance. Then, in terminal, run this script:
+
+    ./guakify.sh
+
+It will ask you to select the window of your desired application. Select the Firefox instance. After you select, the script will automatically decipher the "Class" and "Command" for your application window, and it will show you what it found. You can make changes to the "Class" and "Command" if you think it didn't find any of them correctly. 
 
 Then, it will generate a script for you. This script can be used to summon "Firefox". Now, put this script in some folder which is in your path. E.g.:
 
